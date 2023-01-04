@@ -4,6 +4,9 @@ install:
 start:
 	poetry run brain-games
 
+game:
+	poetry run brain-even
+
 build:
 	poetry build
 
@@ -12,6 +15,9 @@ publish:
 
 package-install:
 	python3 -m pip install --user dist/*.whl
+
+package-reinstall:
+	pip install --user --force-reinstall dist/*.whl
 
 lint:
 	poetry run flake8 brain_games
