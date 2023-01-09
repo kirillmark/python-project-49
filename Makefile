@@ -1,9 +1,6 @@
 install:
 	poetry install
 
-start:
-	poetry run brain-games
-
 game-even:
 	poetry run brain-even
 
@@ -35,8 +32,5 @@ selfcheck:
 	poetry check
 
 check: selfcheck test lint
-
-build: check
-	poetry build
 
 .PHONY: install test lint selfcheck check build
