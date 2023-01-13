@@ -1,14 +1,3 @@
-import random
-
-
-def build_qlist():
-    qlist = []
-    for i in range(3):
-        random_int = random.randint(1, 100)
-        qlist.append(random_int)
-    return qlist
-
-
 def build_alist(list_for_eval):
     rlist = []
     for elem in list_for_eval:
