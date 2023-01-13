@@ -2,10 +2,12 @@ import prompt
 from brain_games.cli import welcome_user
 
 
-def games(rules_str, q_list, r_list):
+def games(rules_str, qlist_func, alist_func):
     print('Welcome to the Brain Games!')
     player_name = welcome_user()
     print(rules_str)
+    q_list = qlist_func()
+    r_list = alist_func(q_list)
     for i in range(3):
         print(f'Question: {q_list[i]}')
         user_answer = prompt.string('Your answer: ')

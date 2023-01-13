@@ -12,7 +12,7 @@ def build_qlist():
     return qlist
 
 
-def calc_function(list_for_eval):
+def build_alist(list_for_eval):
     rlist = []
     for elem in list_for_eval:
         result = eval(elem)
