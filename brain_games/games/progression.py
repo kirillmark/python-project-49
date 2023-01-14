@@ -22,7 +22,7 @@ def build_alist(list_for_eval):
         i = num_l.index('..')
         if i == 0:
             i_num = int(num_l[1]) - (int(num_l[4]) - int(num_l[3]))
-        elif i == len(elem) - 1:
+        elif i == len(num_l) - 1:
             i_num = int(num_l[-2]) + (int(num_l[4]) - int(num_l[3]))
         else:
             i_num = (int(num_l[i - 1]) + int(num_l[i + 1])) // 2
