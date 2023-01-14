@@ -1,14 +1,28 @@
 install:
 	poetry install
 
-game-even:
-	poetry run brain-even
+test:
+	poetry run pytest
 
-game-calc:
-	poetry run brain-calc
+test-coverage:
+	poetry run pytest --cov=hexlet_python_package --cov-report xml
 
-build:
+lint:
+	poetry run flake8 brain_games
+
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
+
+build: check
 	poetry build
+
+#game-even:
+#	poetry run brain-even
+
+#game-calc:
+#	poetry run brain-calc
 
 publish:
 	poetry publish --dry-run
@@ -16,21 +30,7 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
-package-reinstall:
-	pip install --user --force-reinstall dist/*.whl
-
-lint:
-	poetry run flake8 brain_games
-
-test:
-	poetry run pytest
-
-test-coverage:
-	poetry run pytest --cov=hexlet_python_package --cov-report xml
-
-selfcheck:
-	poetry check
-
-check: selfcheck test lint
+#package-reinstall:
+#	pip install --user --force-reinstall dist/*.whl
 
 .PHONY: install test lint selfcheck check build

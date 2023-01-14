@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "arithmetic games package"
 authors = ["Kirill <kirillmark0603@gmail.com>"]
 readme = "README.md"
-packages = [{include = "brain_games"}]
+packages = [
+    {include = "brain_games"},
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
