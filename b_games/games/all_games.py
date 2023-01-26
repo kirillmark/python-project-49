@@ -1,5 +1,5 @@
 import prompt
-from brain_games.cli import welcome_user
+from b_games.cli import welcome_user
 
 
 def games(rules_str, qlist_func, alist_func):

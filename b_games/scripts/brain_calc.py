@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from brain_games.games.all_games import games
-from brain_games.games.calc import build_qlist, build_alist
+from b_games.games.all_games import games
+from b_games.games.calc import build_qlist, build_alist
 
 
 def main():

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-from brain_games.games.even import build_alist
-from brain_games.games.prime import build_qlist
-from brain_games.games.all_games import games
+from b_games.games.even import build_alist
+from b_games.games.prime import build_qlist
+from b_games.games.all_games import games
 
 
 def main():
